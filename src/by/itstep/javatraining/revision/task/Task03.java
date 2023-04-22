@@ -36,6 +36,21 @@ package by.itstep.javatraining.revision.task;
 
 public class Task03 {
     public static int task03(int n, int m, int x, int y) {
-        return -1;
+        if (n < 1 && m < 1 && x < 0 && y < 0) {
+            return -1;
+        }
+        int result;
+        int rasst1 = Math.max(n, m) - Math.max(x, y);
+        int rasst2 = Math.min(n, m) - Math.min(x, y);
+        if ( x <= y && x <= rasst1 && x <= rasst2) {
+            result = x;
+        } else if (y <= x && y <= rasst1 && y <= rasst2) {
+            result = y;
+        } else if (rasst1 <= x && rasst1 <= y && rasst1 <= rasst2) {
+            result = rasst1;
+        } else {
+            result = rasst2;
+        }
+        return result;
     }
 }

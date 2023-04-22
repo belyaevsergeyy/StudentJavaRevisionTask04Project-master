@@ -23,6 +23,20 @@ package by.itstep.javatraining.revision.task;
 
 public class Task04 {
     public static String task04(int a, int b, int c) {
-        return "";
+        String result;
+        if (a <= b && a <= c && b <= c){
+            result = a + " " + b + " " + c;
+        } else if (a <= c && c <= b){
+            result = a + " " + c + " " + b;
+        }else if (b <= a && b <= c && a <= c){
+            result = b + " " + a + " " + c;
+        }else if (b <= c) {
+            result = b + " " + c + " " + a;
+        }else if (a <= b){
+            result = c + " " + a + " " + b;
+        }else {
+            result = c + " " + b + " " + a;
+        }
+        return result;
     }
 }
