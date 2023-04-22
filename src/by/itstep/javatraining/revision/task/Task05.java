@@ -35,6 +35,10 @@ package by.itstep.javatraining.revision.task;
 
 public class Task05 {
     public static boolean task05(int x, int y, int z, int a, int b, int c) {
+        if (x > 0 && y > 0 && z > 0 && a > 0 && b > 0 && c > 0) {
+            return (x <= a || x <= b || x <= c) && (y <= a || y <= b || y <= c) &&
+                    (z <= a || z <= b || z <= c) && x + y + z <= a + b + c;
+        }
         return false;
     }
 }
