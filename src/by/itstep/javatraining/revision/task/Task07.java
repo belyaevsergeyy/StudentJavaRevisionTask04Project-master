@@ -38,6 +38,19 @@ package by.itstep.javatraining.revision.task;
 
 public class Task07 {
     public static int task07(int v, int t) {
-        return 0;
+        if (t < 0) {
+            return -1;
+        }
+        int rasst = Math.abs(v * t);
+        while (rasst > 56) {
+            rasst -= 56;
+        }
+        if (v > 0) {
+            return rasst;
+        } else if (v == 0 || t == 0) {
+            return 0;
+        } else {
+            return 56 - rasst;
+        }
     }
 }
