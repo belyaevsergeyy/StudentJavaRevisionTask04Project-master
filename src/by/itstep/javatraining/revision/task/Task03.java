@@ -40,8 +40,8 @@ public class Task03 {
             return -1;
         }
         int result;
-        int rasst1 = Math.max(n, m) - Math.max(x, y);
-        int rasst2 = Math.min(n, m) - Math.min(x, y);
+        int rasst1 = Math.max(n, m) - y;
+        int rasst2 = Math.min(n, m) - x;
         if ( x <= y && x <= rasst1 && x <= rasst2) {
             result = x;
         } else if (y <= x && y <= rasst1 && y <= rasst2) {
